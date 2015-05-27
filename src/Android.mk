@@ -14,7 +14,7 @@
 
 ifeq ($(BUILD_LMBENCH),true)
 LOCAL_PATH := $(call my-dir)
-COMMON_CFLAGS := -DANDROID -DHAVE_uint
+COMMON_CFLAGS := -DANDROID -DHAVE_uint  -DHAVE_socklen_t -DHAVE_off64_t -Wno-error=int-to-pointer-cast -Dvalloc=malloc
 COMMON_LIBS := lmbench_lib
 ANDROID_LMBENCH := true
 
